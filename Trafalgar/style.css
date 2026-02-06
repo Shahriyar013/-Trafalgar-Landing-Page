@@ -1,0 +1,204 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Mulish, sans-serif;
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+}
+
+.logo {
+  height: 30px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+/* Hero */
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 80px;
+}
+
+.hero-img {
+  width: 400px;
+}
+
+/* Buttons */
+
+button {
+  background: #458ff6;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.outline {
+  background: white;
+  color: #458ff6;
+  border: 1px solid #458ff6;
+}
+
+/* Services */
+
+.services {
+  text-align: center;
+  padding: 60px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin: 40px 0;
+}
+
+.card {
+  padding: 25px;
+  box-shadow: 0 0 10px #ddd;
+  border-radius: 10px;
+}
+
+.card img {
+  height: 50px;
+}
+
+/* About */
+
+.about {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 80px;
+}
+
+.about img {
+  width: 350px;
+}
+
+/* Testimonial */
+
+.testimonial {
+  background: #458ff6;
+  color: white;
+  text-align: center;
+  padding: 60px;
+}
+
+.review img {
+  width: 60px;
+  border-radius: 50%;
+}
+
+/* Articles */
+
+.articles {
+  text-align: center;
+  padding: 60px;
+}
+
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin: 40px 0;
+}
+
+.article {
+  box-shadow: 0 0 10px #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.article img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Footer */
+
+.footer {
+  background: #458ff6;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 40px;
+}
+
+/* Tablet */
+
+@media (max-width: 1023px) {
+  .service-grid,
+  .article-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about {
+    flex-direction: column;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: white;
+    padding: 20px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .service-grid,
+  .article-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
